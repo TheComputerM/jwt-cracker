@@ -1,10 +1,12 @@
-import { component$ } from '@builder.io/qwik'
+import { component$, useSignal, $ } from '@builder.io/qwik';
 
 export const App = component$(() => {
-
+  const count = useSignal(0);
+  const increment = $(() => count.value++);
   return (
-    <main>
-      Hello World
-    </main>
-  )
-})
+    <>
+      <button onClick$={increment}>Increment</button>
+      <p>Count: {count.value}</p>
+    </>
+  );
+});
