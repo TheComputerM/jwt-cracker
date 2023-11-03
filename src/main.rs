@@ -1,10 +1,9 @@
-use jwt_cracker::size;
 use random_string::generate;
 
 fn main() {
     let token = std::env::args().nth(1).expect("Provide Token");
 
-    let len = size(token);
+    let len = token.len();
     let charset = "1234567890abcdefghijklmnopqrtuvwxzy.";
 
     let test_signature = generate(len, charset);

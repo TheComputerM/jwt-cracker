@@ -34,6 +34,9 @@ export const App = component$(() => {
       <Accordion>
         I am pre-rendered on the Server and hidden until needed.
       </Accordion>
+      <p>
+        Finish Project
+      </p>
     </>
   );
 });
