@@ -1,3 +1,5 @@
 fn main() {
-    println!("Hello, world!");
+    let token = std::env::args().nth(1).expect("Provide Token");
+
+    println!("{}", token);
 }
