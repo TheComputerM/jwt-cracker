@@ -1,5 +1,7 @@
 import { defineConfig } from 'vite'
 import { qwikVite } from '@builder.io/qwik/optimizer'
+import wasm from "vite-plugin-wasm";
+
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -7,5 +9,6 @@ export default defineConfig({
     qwikVite({
       csr: true,
     }),
+    wasm()
   ],
 })
